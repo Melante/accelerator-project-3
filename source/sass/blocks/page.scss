@@ -1,0 +1,45 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 100vh;
+}
+
+.page__header,
+.page__footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+.page__body-menu {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 89px;
+  }
+}
+
+.page__body-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--overlay-body, rgba(45, 56, 63, 0.6));
+  z-index: 3;
+}

@@ -1,22 +1,303 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship</title>
+  <link rel="preload" href="./fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/vendor/swiper-bundle.css">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
+<body class="page__body">
+  <!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
+    </svg> -->
+  <!-- примеры требуемых атрибутов data-test="*" -->
+  <header class="page__header header" data-test="hero">
+    <div class="header__nav wrapper">
+      <picture>
+        <img class="header__nav-logo logo" src="img/logo/logo.svg" width="52" height="52" alt="Логотип тренажерного зала SuperGym">
+      </picture>
+      <div class="header__menu-wrapper">
+        <div class="header__nav-button-wrapper">
+          <button class="header__nav-button button" type="button">Меню
+            <span class="header__nav-button-icon header__nav-button-open  button__icon" aria-expanded="false"></span>
+          </button>
+        </div>
+
+        <!-- menu -->
+        <div class="header__overlay">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">О проекте</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link header__menu-link-submenu" href="#">Программы</a>
+                <ul class="header__menu-submenu">
+                  <li class="header__menu-submenu-item">Стажировка</li>
+                  <li class="header__menu-submenu-item">Волонтёрство</li>
+                  <li class="header__menu-submenu-item">Учёба</li>
+                  <li class="header__menu-submenu-item">Религия</li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Как поехать</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Отзывы</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link header__menu-link-submenu" href="#">Новости</a>
+                <ul class="header__menu-submenu">
+                  <li class="header__menu-submenu-item">Стажировка</li>
+                  <li class="header__menu-submenu-item">Волонтёрство</li>
+                  <li class="header__menu-submenu-item">Учёба</li>
+                  <li class="header__menu-submenu-item">Религия</li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero-swiper -->
+    <div class="hero">
+
+      <div class="hero__swiper swiper">
+
+        <div class="hero__wrapper swiper-wrapper">
+
+          <div class="hero__pagination swiper-pagination ">
+            <button class="hero__pagination-bullet hero__pagination-bullet--active swiper-pagination-bullet swiper-pagination-bullet-active" type="button" aria-label="1 слайд"></button>
+            <button class="hero__pagination-bullet swiper-pagination-bullet" type="button" aria-label="2 слайд"></button>
+            <button class="hero__pagination-bullet swiper-pagination-bullet" type="button" aria-label="3 слайд"></button>
+          </div>
+
+          <!-- slide1 -->
+          <div class="hero__slide swiper-slide">
+
+            <picture>
+              <source srcset="img/hero/hero-photo1-desktop@1x.webp 1x, img/hero/hero-photo1-desktop@2x.webp 2x" width="1440" height="800" type="image/webp" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo1-tablet@1x.webp 1x, img/hero/hero-photo1-tablet@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 768px)">
+              <source srcset="img/hero/hero-photo1-mobile@1x.webp 1x, img/hero/hero-photo1-mobile@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 320px)">
+
+              <source srcset="img/hero/hero-photo1-desktop@1x.jpg 1x, img/hero/hero-photo1-desktop@2x.jpg 2x" width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo1-tablet@1x.jpg 1x, img/hero/hero-photo1-tablet@2x.jpg 2x" width="768" height="1024" type="image/jpeg" media="(min-width: 768px)">
+              <img class="hero__slide-image" src="img/hero/hero-photo1-mobile@1x.jpg" srcset="img/hero/hero-photo1-mobile@2x.jpg 2x" width="320" height="568" alt="Девушка держит в руках папки">
+            </picture>
+            <div class="hero__slide-container wrapper">
+
+              <h1 class="hero__slide-title">Глобальный
+                профессиональный
+                опыт обучения
+                за рубежом</h1>
+              <p>Погрузитесь в академическую
+                программу, проходя практику
+                в разных городах, ощущая
+                настоящий студенческий стиль жизни!</p>
+              <div class="hero__button-container">
+                <a class="hero__button button" href="#">Подробнее
+                  <span class="hero__button-icon button__icon"></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- slide2 -->
+          <div class="hero__slide swiper-slide">
+
+            <picture>
+              <source srcset="img/hero/hero-photo2-desktop@1x.webp 1x, img/hero/hero-photo2-desktop@2x.webp 2x" width="1440" height="800" type="image/webp" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo2-tablet@1x.webp 1x, img/hero/hero-photo2-tablet@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 768px)">
+              <source srcset="img/hero/hero-photo2-mobile@1x.webp 1x, img/hero/hero-photo2-mobile@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 320px)">
+
+              <source srcset="img/hero/hero-photo2-desktop@1x.jpg 1x, img/hero/hero-photo2-desktop@2x.jpg 2x" width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo2-tablet@1x.jpg 1x, img/hero/hero-photo2-tablet@2x.jpg 2x" width="768" height="1024" type="image/jpeg" media="(min-width: 768px)">
+              <img class="hero__slide-image" src="img/hero/hero-photo2-mobile@1x.jpg" srcset="img/hero/hero-photo2-mobile@2x.jpg 2x" width="320" height="568" alt="Люди улыбаются">
+            </picture>
+            <div class="hero__slide-container wrapper">
+
+              <h1 class="hero__slide-title">Волонтёрские программы –
+                внесите свой вклад в общество</h1>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <div class="hero__button-container">
+                <a class="hero__button button" href="#">Подробнее
+                  <span class="hero__button-icon button__icon "></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <!-- slide3 -->
+          <div class="hero__slide swiper-slide">
+
+            <picture>
+              <source srcset="img/hero/hero-photo3-desktop@1x.webp 1x, img/hero/hero-photo3-desktop@2x.webp 2x" width="1440" height="800" type="image/webp" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo3-tablet@1x.webp 1x, img/hero/hero-photo3-tablet@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 768px)">
+              <source srcset="img/hero/hero-photo3-mobile@1x.webp 1x, img/hero/hero-photo3-mobile@2x.webp 2x" width="768" height="1024" type="image/webp" media="(min-width: 320px)">
+
+              <source srcset="img/hero/hero-photo3-desktop@1x.jpg 1x, img/hero/hero-photo3-desktop@2x.jpg 2x" width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)">
+              <source srcset="img/hero/hero-photo3-tablet@1x.jpg 1x, img/hero/hero-photo3-tablet@2x.jpg 2x" width="768" height="1024" type="image/jpeg" media="(min-width: 768px)">
+              <img class="hero__slide-image" src="img/hero/hero-photo3-mobile@1x.jpg" srcset="img/hero/hero-photo3-mobile@2x.jpg 2x" width="320" height="568" alt="Два человека сидят над документами и обдумывают предложения">
+            </picture>
+            <div class="hero__slide-container wrapper">
+
+              <h1 class="hero__slide-title">Программы стажировок
+                в крупнейших компаниях мира</h1>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <div class="hero__button-container">
+                <a class="hero__button button" href="#">Подробнее
+                  <span class="hero__button-icon button__icon "></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+  <main class="page__main">
+    <!-- about -->
+    <section class="about wrapper" data-test="about">
+      <h1 class="visually-hidden">Информация о стажировке и ее плюсы</h1>
+      <div class="about__wrapper1">
+        <h2 class="about__title">О проекте «Стажировка»</h2>
+        <p>«Стажировка» — совместный проект правительств и волонтёрских
+          бригад.</p>
+      </div>
+      <div class="about__wrapper2">
+        <h3>Наша цель</h3>
+        <p>Наша деятельность направлена
+          на повышение квалификации молодых
+          специалистов на ранних и средних
+          стадиях карьеры, предоставляя
+          им инструменты для решения сложных
+          проблем, с которыми сталкиваются в мире.
+          Цель центра — наделить этих людей
+          способностью инициировать значимые
+          изменения.</p>
+        <button class="about__button button" type="button">Подробнее о проекте
+          <span class="about__button-icon button__icon"></span>
+        </button>
+      </div>
+
+      <!-- modal -->
+      <div class="about__modal modal">
+        <h3 class="modal__title">Напишите нам</h3>
+        <p class="modal__description">Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы&nbsp;на них ответим!</p>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-title">
+              <label class="modal__form-label" for="name">
+                Имя
+              </label>
+            </legend>
+            <input class="modal__form-input" type="text" id="name" name="user-name" required>
+          </fieldset>
+
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-title">
+              <label class="modal__form-label" for="phone">
+                Телефон
+              </label>
+            </legend>
+            <input class="modal__form-input" type="text" id="phone" name="user-name" required>
+          </fieldset>
+
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-title">
+              <label class="modal__form-label" for="city">
+                Выберите город
+              </label>
+            </legend>
+            <input class="form-dropdown__input visually-hidden" type="text" name="city" value="город" id="city" required>
+            <div class="modal__form-input form-dropdown">
+              <button class="form-dropdown__button  modal__form-input" type="button">
+                <span class="visually-hidden">выбрать город</span>
+              </button>
+              <ul class="form-dropdown__list">
+                <li class="form-dropdown__item" data-value="saintPetersburg">Санкт-Петербург</li>
+                <li class="form-dropdown__item" data-value="moscow">Москва</li>
+                <li class="form-dropdown__item" data-value="vladivostok
+                ">Владивосток</li>
+                <li class="form-dropdown__item" data-value="chelyabinsk">Челябинск</li>
+                <li class="form-dropdown__item" data-value="kaliningrad">Калининград</li>
+              </ul>
+
+            </div>
+
+            <!-- <select class="modal__form-input" id="city" name="user-name">
+              <option value="" disabled selected></option>
+              <option value="Saint Petersburg">Санкт-петербург</option>
+              <option value="Saint Petersburg">Санкт-петербург</option>
+              <option value="Saint Petersburg">Санкт-петербург</option>
+              <option value="Saint Petersburg">Санкт-петербург</option>
+            </select> -->
+          </fieldset>
+
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-title">
+              <label class="modal__form-label modal__form-label-checkbox" for="policy">
+                <input class="modal__form-input-checkbox" type="checkbox" id="policy" name="policy" required>
+                <span class="modal__form-checkbox" aria-expanded="false" role="checkbox"></span>
+                Я согласен на обработку моих персональных данных
+
+              </label>
+            </legend>
+
+          </fieldset>
+
+          <button class="modal__form-button button" type="submit">Отправить
+            <span class="modal__form-icon button__icon "></span>
+          </button>
+        </form>
+        <button class="modal__form-button-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
+
+      <div class="about__advantages advantages">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h4>Более 250 программ</h4>
+            <p>учебных и рабочих, разной
+              длительностью от 3 месяцев
+              до 1 года</p>
+          </li>
+          <li class="advantages__item">
+            <h4>Более 3000 участников</h4>
+            <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+          </li>
+          <li class="advantages__item">
+            <h4>участники из 60 стран</h4>
+            <p>студенты со всего мира приезжают на программу
+              «Стажировки» от 3 месяцев до 1 года</p>
+          </li>
+          <li class="advantages__item">
+            <h4>от 4 200 $ <br>
+              до 8 400 $</h4>
+            <p>грант всем участникам
+              для комфортного прохождения
+              программы</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <div data-test="programs">programs</div>
     <div data-test="grant">grant</div>
     <div data-test="news">news</div>
@@ -24,8 +305,13 @@
     <div data-test="reviews">reviews</div>
     <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
+  </main>
+
+  <footer class="page__footer">
     <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  </footer>
+  <script src="js/vendor/swiper-bundle.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>

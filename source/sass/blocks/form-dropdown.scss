@@ -1,0 +1,75 @@
+.form-dropdown__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  height: 42px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: start;
+}
+
+.form-dropdown__button::after,
+.form-dropdown__button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 19px;
+  width: 10px;
+  height: 1px;
+  background-color: var(--text-primary, #484848);
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+
+.form-dropdown__button::after {
+  transform: rotate(45deg);
+  right: 25px;
+}
+
+.form-dropdown__button::before {
+  transform: rotate(-45deg);
+}
+
+.form-dropdown__button-close::after {
+  transform: rotate(-45deg);
+  right: 25px;
+}
+
+.form-dropdown__button-close::before {
+  transform: rotate(45deg);
+}
+
+.form-dropdown__list {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 0;
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+  transition: all 0.5s ease;
+}
+
+.form-dropdown__list-open {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  overflow: visible;
+  display: grid;
+  gap: 17px;
+  width: 100%;
+  margin: 0;
+  padding: 17px 20px;
+  font-size: 14px;
+  line-height: 1;
+  list-style-type: none;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  background-color: var(--back-secondary, #ffffff);
+  z-index: 3;
+}
+
+.form-dropdown__item {
+  cursor: pointer;
+}

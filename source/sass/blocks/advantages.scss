@@ -1,0 +1,104 @@
+.advantages {
+  border-radius: 20px;
+  background-color: var(--back-accent, #316dc2);
+  color: var(--text-primary-back-dark, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 42px 20px 40px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 54px 52px;
+    padding: 72px 50px 50px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 72px 100px 50px 120px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--back-primary, #f0efe9);
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    padding: 30px 41px;
+    gap: 15px;
+  }
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: -21px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-image: url("/__spritemap#sprite-star-view");
+  background-size: 18px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--back-accent, #316dc2);
+}
+
+.advantages__item > h4 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.1;
+    max-width: 56%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
+
+.advantages__item > p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--back-primary, #f0efe9);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
+  }
+}
