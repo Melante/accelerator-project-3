@@ -1,0 +1,323 @@
+.programs {
+  min-width: 0;  // отключаем действие flex на swiper
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 124px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 65px;
+  }
+}
+
+.programs__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.programs__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 34px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-secondary, #316dc2);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+    font-size: 34px;
+    line-height: 1.47;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+.programs__button {
+  position: absolute;
+  width: 64%;
+  max-width: 300px;
+  bottom: 50px;
+  padding: 4px 4px 4px 31px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -4px;
+    right: auto;
+    bottom: auto;
+    width: 34.5%;
+    font-size: 14px;
+    transform: translateX(0);
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 234px;
+    top: -3px;
+  }
+}
+
+.programs__button-icon {
+  width: 34px;
+  height: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.programs__button-icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 8px;
+  height: 8px;
+  mask-image: url("/__spritemap#sprite-arrow-top-right-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--back-secondary, #ffffff);
+}
+
+.programs__swiper.swiper {
+  position: relative;
+  margin: 0 auto;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 45px;
+    margin-bottom: 50px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    width: 1240px;
+  }
+}
+
+.programs__slide.swiper-slide {
+  @media (min-width: $tablet-width) {
+    max-width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 392px;
+  }
+}
+
+.programs__slide.swiper-slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-primary, rgba(49, 109, 194, 0.2));
+}
+
+.programs__slide-image {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+
+  @media (min-width: $tablet-width) {
+    height: 420px;
+  }
+}
+
+.programs__slide-container {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  margin: 0;
+  padding-bottom: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 17px;
+    padding-right: 51px;
+  }
+}
+
+.programs__slide-title {
+  position: relative;
+  width: 54%;
+  margin: 0;
+  padding: 19px 35px 5px 18px;
+  border-radius: 12px 12px 0 0;
+  font-size: 16px;
+  line-height: 1.12;
+  font-weight: 400;
+  color: var(--text-secondary, #316dc2);
+  background-color: var(--back-secondary, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    width: 61%;
+    padding: 19px 35px 5px 18px;
+    font-size: 20px;
+    line-height: 0.7;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 0.71;
+  }
+}
+
+.programs__slide-title::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 15px;
+  background-size: 14px 16px;
+  position: absolute;
+  background-image: radial-gradient(circle at top right, transparent 66%, var(--back-secondary, #ffffff) 40%);
+  bottom: 0;
+  right: -11px;
+}
+
+.programs__slide-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--back-secondary, #ffffff);
+  border-radius: 0 12px 12px;
+  padding: 13px 18px 14px;
+
+  @media (min-width: $tablet-width) {
+    gap: 22px;
+    padding: 12px 18px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 83px;
+  }
+}
+
+.programs__slide-text > p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--text-primary, #484848);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 83%;
+    line-height: 1.29;
+  }
+}
+
+.programs__slide-button {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.programs__slide-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 10px;
+  height: 10px;
+  mask-image: url("/__spritemap#sprite-arrow-top-right-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--back-secondary, #ffffff);
+}
+
+.programs__navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+}
+
+.programs__scrollbar.swiper-scrollbar {
+  position: relative;
+  width: 90%;
+  height: 2px;
+
+  background: var(--back-accent, #316dc2);
+  opacity: 0.2;
+}
+
+.programs__scrollbar.swiper-scrollbar > .swiper-scrollbar-drag {
+  background: var(--back-accent, #316dc2);
+}
+
+.programs__navigation-button {
+  position: absolute;
+  top: 77px;
+  right: 6px;
+  width: 70px;
+  display: flex;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 11px;
+    right: -9px;
+    width: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 72px;
+  }
+}
+
+.programs__prev.swiper-button-prev,
+.programs__next.swiper-button-next {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+}
+
+.programs__prev.swiper-button-prev::after,
+.programs__next.swiper-button-next::after {
+  content: "";
+  display: block;
+  mask-image: url("/__spritemap#sprite-arrow-right-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  min-width: 20px;
+  height: 20px;
+  background-color: var(--back-accent, #316dc2);
+}
+
+.programs__prev.swiper-button-prev::after {
+  transform: rotate(180deg);
+}

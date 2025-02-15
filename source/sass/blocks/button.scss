@@ -11,6 +11,7 @@
   padding: 5px 5px 5px 21px;
   border: 1px solid var(--border-primary, #316dc2);
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .button__icon {
@@ -20,6 +21,7 @@
   height: 46px;
   background-color: var(--back-accent, #316dc2);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 // .button__icon::before {

@@ -7,3 +7,4 @@ import './burger-menu.js';
 import './hero-swiper.js';
 import './about.js';
 import './dropdown.js';
+import './programs-swiper.js';

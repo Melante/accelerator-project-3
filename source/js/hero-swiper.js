@@ -2,21 +2,21 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import {Keyboard, Navigation, Pagination} from 'swiper/modules';
 
-const paginationSlide = document.querySelector('.hero__pagination');
-const containerBlocks = document.querySelectorAll('.hero__slide-container');
+// const paginationSlide = document.querySelector('.hero__pagination');
+// const containerBlocks = document.querySelectorAll('.hero__slide-container');
 
-// Создаем массив для хранения значений bottom
-const bottomValues = Array.from(containerBlocks).map((containerBlock, index) => {
-  const heightBlock = containerBlock.offsetHeight;
-  const bottomValue = heightBlock + 10; // добавляем 10 пикселей к высоте
-  console.log(`Слайд ${index}: высота = ${heightBlock}, bottom = ${bottomValue}px`);
-  return bottomValue; // возвращаем значение для массива
-});
+// // Создаем массив для хранения значений bottom
+// const bottomValues = Array.from(containerBlocks).map((containerBlock, index) => {
+//   const heightBlock = containerBlock.offsetHeight;
+//   const bottomValue = heightBlock + 10; // добавляем 10 пикселей к высоте
+//   console.log(`Слайд ${index}: высота = ${heightBlock}, bottom = ${bottomValue}px`);
+//   return bottomValue; // возвращаем значение для массива
+// });
 
-// Функция для обновления значения bottom
-function updatePaginationBottom(currentIndex) {
-  paginationSlide.style.bottom = `${bottomValues[currentIndex]}px`;
-}
+// // Функция для обновления значения bottom
+// function updatePaginationBottom(currentIndex) {
+//   paginationSlide.style.bottom = `${bottomValues[currentIndex]}px`;
+// }
 
 // Инициализируем слайд
 // const currentSlideIndex = 0;
@@ -31,8 +31,8 @@ function updatePaginationBottom(currentIndex) {
 // });
 
 // Теперь bottomValues содержит высоты для каждого слайда
-updatePaginationBottom();
-console.log(updatePaginationBottom());
+// updatePaginationBottom();
+// console.log(updatePaginationBottom());
 
 // const paginationSlide = document.querySelector('.hero__pagination');
 // const containerBlocks = document.querySelectorAll('.hero__slide-container');
