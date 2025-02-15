@@ -1,13 +1,13 @@
 .about {
   // position: relative;
   padding-top: 51px;
-  padding-bottom: 50px;
+  padding-bottom: 51px;
   display: grid;
   row-gap: 40px;
 
   @media (min-width: $tablet-width) {
     row-gap: 39px;
-    padding-bottom: 50px;
+    padding-bottom: 51px;
   }
 
   @media (min-width: $desktop-width) {
