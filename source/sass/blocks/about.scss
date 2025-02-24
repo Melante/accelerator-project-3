@@ -1,13 +1,12 @@
 .about {
-  // position: relative;
   padding-top: 51px;
-  padding-bottom: 51px;
+  padding-bottom: 50px;
   display: grid;
   row-gap: 40px;
 
   @media (min-width: $tablet-width) {
     row-gap: 39px;
-    padding-bottom: 51px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -119,26 +118,11 @@
 }
 
 .about__button-icon {
-  width: 34px;
+  min-width: 34px;
   height: 34px;
 
   @media (min-width: $tablet-width) {
     width: 46px;
     height: 46px;
   }
-}
-
-.about__button-icon::before {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  width: 10px;
-  height: 10px;
-  mask-image: url("/__spritemap#sprite-arrow-top-right-view");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: var(--back-secondary, #ffffff);
 }

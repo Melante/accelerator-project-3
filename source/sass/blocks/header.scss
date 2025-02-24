@@ -1,5 +1,4 @@
 .header__nav {
-  // position: relative;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -20,7 +19,6 @@
 
 
 .header__nav-button {
-  // width: 100%;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.02px;
@@ -30,6 +28,21 @@
   @media (min-width: $tablet-width) {
     padding: 4px 4px 4px 21px;
   }
+}
+
+.header__nav-button-icon {
+  position: relative;
+  display: block;
+  min-width: 46px;
+  height: 46px;
+  background-color: var(--back-accent, #316dc2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header__nav-button--dropdown {
+  color: var(--text-primary-back-dark, #ffffff);
+  background-color: var(--back-accent, #316dc2);
 }
 
 .header__nav-button-open::before,
@@ -54,8 +67,13 @@
   top: 60%;
 }
 
+.header__nav-button--close {
+  background-color: var(--back-secondary, #ffffff);
+}
+
 .header__nav-button--close::before,
 .header__nav-button--close::after {
+  background-color: var(--back-accent, #316dc2);
   translate: -50%;
 }
 
@@ -110,6 +128,8 @@
   gap: 21px;
   margin: 0;
   padding: 31px 25px;
+  max-height: 500px;
+  overflow-y: auto;
   border-radius: 16px;
   list-style-type: none;
   background-color: var(--back-accent, #316dc2);
@@ -123,6 +143,12 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
 }
 
 .header__menu-submenu {

@@ -1,4 +1,4 @@
-.form-dropdown__button {
+.dropdown__button {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,8 +9,8 @@
   text-align: start;
 }
 
-.form-dropdown__button::after,
-.form-dropdown__button::before {
+.dropdown__button::after,
+.dropdown__button::before {
   content: "";
   display: block;
   position: absolute;
@@ -23,25 +23,25 @@
   transition: all 0.5s ease;
 }
 
-.form-dropdown__button::after {
+.dropdown__button::after {
   transform: rotate(45deg);
   right: 25px;
 }
 
-.form-dropdown__button::before {
+.dropdown__button::before {
   transform: rotate(-45deg);
 }
 
-.form-dropdown__button-close::after {
+.dropdown__button-close::after {
   transform: rotate(-45deg);
   right: 25px;
 }
 
-.form-dropdown__button-close::before {
+.dropdown__button-close::before {
   transform: rotate(45deg);
 }
 
-.form-dropdown__list {
+.dropdown__list {
   overflow: hidden;
   font-size: 14px;
   line-height: 0;
@@ -51,7 +51,7 @@
   transition: all 0.5s ease;
 }
 
-.form-dropdown__list-open {
+.dropdown__list-open {
   position: absolute;
   top: 50px;
   left: 0;
@@ -66,11 +66,12 @@
   list-style-type: none;
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 8px;
+  color: var(--text-primary, #484848);
   background-color: var(--back-secondary, #ffffff);
   z-index: 3;
 }
 
-.form-dropdown__list-open > .form-dropdown__item {
+.dropdown__list-open > .dropdown__item {
   cursor: pointer;
   padding: 17px 20px;
 
@@ -84,3 +85,4 @@
     color: var(--text-primary-back-dark, #ffffff);
   }
 }
+

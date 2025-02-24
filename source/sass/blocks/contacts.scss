@@ -1,0 +1,151 @@
+.contacts {
+  padding-top: 76px;
+  padding-bottom: 70px;
+  color: var(--text-primary-back-dark, #ffffff);
+  background-color: var(--back-accent, #316dc2);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 101px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 32px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    font-size: 34px;
+    line-height: 1.47;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+.contacts__info {
+  display: grid;
+  gap: 21px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+  }
+}
+
+.contacts__info-wrapper {
+  display: grid;
+  gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 263px;
+    gap: 25px;
+  }
+}
+
+.contacts__info-title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--text-secondary-back-dark, #f0efe9);
+  opacity: 0.8;
+}
+
+.contacts__info-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--text-primary-back-dark, #ffffff);
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.62;
+  }
+}
+
+.contacts__info-phone:hover,
+.contacts__info-email:hover {
+  opacity: 0.7;
+}
+
+.contacts__info-phone:focus,
+.contacts__info-email:focus {
+  color: var(--text-primary, #484848);
+  border-bottom: 1px solid var(--text-primary, #484848);
+}
+
+.contacts__info-phone:active,
+.contacts__info-email:active {
+  color: var(--text-primary-back-dark, #ffffff);
+  border-bottom: 1px solid var(--border-accent, #ffffff);
+}
+
+.contacts__map {
+  grid-column: 1/-1;
+}
+
+.contacts__map::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 1px solid var(--border-accent, #ffffff);
+  opacity: 0.2;
+}
+
+.contacts__map-image {
+  display: block;
+  width: 100%;
+  height: 240px;
+  margin-top: 30px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+
+  @media (min-width: $tablet-width) {
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 486px;
+    margin-top: 40px;
+  }
+}
+

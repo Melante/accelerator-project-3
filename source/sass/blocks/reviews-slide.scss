@@ -1,0 +1,134 @@
+.reviews-slide__info {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.reviews-slide__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    gap: 15px;
+  }
+}
+
+.reviews-slide__image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.reviews-slide__name {
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--text-secondary, #316dc2);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.reviews-slide__info-program {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+.reviews-slide__info-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.reviews-slide__info-description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.17;
+  opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 1.43;
+    opacity: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.29;
+  }
+}
+
+.reviews-slide__text-title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.12;
+  color: var(--text-secondary, #316dc2);
+  max-height: 120px;
+  overflow: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 27px;
+    font-size: 24px;
+    line-height: 1.08;
+  }
+}
+
+.reviews-slide__text > span {
+  margin: 0;
+  font-size: 14px;
+  line-height: 0.43;
+  max-height: 200px;
+  overflow: auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 1.62;
+  }
+}

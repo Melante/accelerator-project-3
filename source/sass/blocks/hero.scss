@@ -41,8 +41,6 @@
 
 .hero__slide-container {
   position: absolute;
-
-  // padding: 0 15px;
   padding-bottom: 20px;
   bottom: 0;
   z-index: 3;
@@ -64,9 +62,12 @@
   line-height: 1.25;
   border-radius: 0 0 14px;
   margin: 0;
+  padding: 0 14px 15px;
   width: 92%;
   max-width: 400px;
-  padding: 0 14px 15px;
+  max-height: 300px;
+  overflow-x: auto;
+
   background-color: var(--back-secondary, #ffffff);
 
   @media (min-width: $tablet-width) {
@@ -141,13 +142,53 @@
   border-radius: 12px 12px 0 0;
   width: fit-content;
   background-color: var(--back-secondary, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 100px;
+  }
+}
+
+.hero__pagination.swiper-pagination::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 15px;
+  background-size: 14px 16px;
+  position: absolute;
+  background-image: radial-gradient(circle at top right, transparent 66%, var(--back-secondary, #ffffff) 40%);
+  bottom: 0;
+  right: -11px;
 }
 
 .hero__pagination-bullet {
   width: 8px;
   height: 8px;
-  border: 2px solid var(--back-accent, #316dc2);
+  border: 2px solid var(--border-primary, #316dc2);
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover {
+    border: 2px solid var(--border-accent, #ffffff);
+    background-color: rgba(49, 109, 194, 0.7);
+  }
+
+  &:focus {
+    background-color: var(--back-accent, #316dc2);
+    border: 2px solid var(--border-primary, #316dc2);
+  }
+
+  &:active {
+    background-color: var(--back-active, #275699);
+    border: 2px solid var(--back-active, #275699);
+  }
 }
 
 .hero__pagination-bullet--active {
@@ -198,7 +239,7 @@
 }
 
 .hero__button-icon {
-  width: 34px;
+  min-width: 34px;
   height: 34px;
 
   @media (min-width: $tablet-width) {
@@ -221,19 +262,4 @@
   @media (min-width: $desktop-width) {
     padding: 5px 4px 5px 31px;
   }
-}
-
-.hero__button-icon::before {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  width: 10px;
-  height: 10px;
-  mask-image: url("/__spritemap#sprite-arrow-top-right-view");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: var(--back-secondary, #ffffff);
 }

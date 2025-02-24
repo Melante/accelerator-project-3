@@ -1,0 +1,114 @@
+.social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: var(--back-accent, #316dc2);
+  border: none;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+
+  &:focus {
+    border: none;
+    background-color: var(--back-secondary, #ffffff);
+  }
+
+  &:active {
+    background-color: var(--back-active, #275699);
+  }
+
+  &:disabled,
+  &--disabled {
+    border: 1px solid var(--disabled, #999999);
+    pointer-events: none;
+  }
+}
+
+.social__link::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  display: block;
+  width: 12px;
+  height: 12px;
+  mask-image: var(--icon-social);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--back-secondary, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+.social__link--vk {
+  --icon-social: url("/__spritemap#sprite-vk-view");
+}
+
+.social__link--ok {
+  --icon-social: url("/__spritemap#sprite-ok-view");
+}
+
+.social__link--reddit {
+  --icon-social: url("/__spritemap#sprite-reddit-view");
+}
+
+
+.social__link:disabled::before,
+.social__link--disabled::before {
+  background-color: var(--disabled, #999999);
+}
+
+.social__link:hover::before {
+  opacity: 0.7;
+}
+
+.social__link:focus::before {
+  opacity: 1;
+  background-color: var(--back-accent, #316dc2);
+}
+
+.social__link:active::before {
+  background-color: var(--back-secondary, #ffffff);
+}
