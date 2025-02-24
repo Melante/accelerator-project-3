@@ -8,3 +8,7 @@ import './hero-swiper.js';
 import './about.js';
 import './dropdown.js';
 import './programs-swiper.js';
+import './news-swiper.js';
+import './faq-accordion.js';
+import './reviews-swiper.js';
+import './form.js';

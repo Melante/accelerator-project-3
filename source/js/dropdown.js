@@ -2,7 +2,7 @@ const button = document.querySelector('.form-dropdown__button');
 const dropdownList = document.querySelector('.form-dropdown__list');
 const dropdownOpen = document.querySelector('.form-dropdown__button');
 const dropdownItem = document.querySelectorAll('.form-dropdown__item');
-const dropdownInput = document.querySelector('.form-dropdown__input');
+const dropdownInput = document.querySelector('.modal__form-input-dropdown');
 
 button.addEventListener('click', () => {
   dropdownList.classList.toggle('form-dropdown__list-open');

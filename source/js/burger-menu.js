@@ -2,12 +2,13 @@ const button = document.querySelector('.header__nav-button');
 const menuBurger = document.querySelector('.header__nav-button-open');
 const menu = document.querySelector('.header__overlay');
 const body = document.querySelector('.page__body');
-// const logoHeader = document.querySelector('.header__nav-logo');
+const logoHeader = document.querySelector('.header__nav-logo');
 
 const submenuButtons = document.querySelectorAll('.header__menu-link-submenu');
 
 button.addEventListener('click', () => {
-  const isOpen = menuBurger.classList.toggle('modal__form-button-close');
+  button.classList.toggle('header__nav-button--dropdown');
+  const isOpen = menuBurger.classList.toggle('header__nav-button--close');
   menu.classList.toggle('header__overlay-open');
   body.classList.toggle('page__body-menu');
 
@@ -19,12 +20,12 @@ button.addEventListener('click', () => {
     const menuWidth = menu.offsetWidth;
     button.style.width = `${menuWidth}px`;
     button.style.transition = 'all 0.5s ease';
-    // Проверка на ширину экрана
-    // if(window.innerWidth < 450){
-    //   logoHeader.style.display = 'none';
-    // } else {
-    //   logoHeader.style.display = 'block';
-    // }
+    //Проверка на ширину экрана
+    if(window.innerWidth < 450){
+      logoHeader.style.display = 'none';
+    } else {
+      logoHeader.style.display = 'block';
+    }
 
   }else{
     menuBurger.setAttribute('aria-expanded', 'false');
